@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Log</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Google Fonts: "Poppins", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<div class="app-container">
+    <header>
+    <h1>Workout Log <i class="fas fa-book"></i></h1>
+    </header>
+    <!-- form for creating new exercise list item -->
+    <div class="form-container">
+    <form>
+        <label for="exercise-select">Select exercise</label>
+        <select name="exercise-select" id="exercise-select">
+            <option value="Bench">Bench</option>
+            <option value="Squat">Squat</option>
+        </select>
+
+        <label for="sets-select">Sets</label>
+        <input type="number" id="sets-select" name="sets-select" min="0" value="5">
+
+        <label for="reps-select">Reps</label>
+        <input type="number" id="reps-select" name="reps-select" min="0" value="5">
+
+        <label for="weight-select">Weight</label>
+        <input type="number" id="weight-select" name="weight-select" min="0" value="100">
+
+        <button id="add-button" type="submit">
+            <span>Add</span>
+            <i class="fas fa-plus-square"></i>
+        </button>
+    </form>
+    </div><!-- /form-container-->
+    
+
+    <div id="exercise-container">
+        <table id="exercise-list">
+        </table>
+    </div><!-- /exercise-container -->
+</div><!-- /app-container -->
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
