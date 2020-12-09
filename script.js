@@ -5,10 +5,9 @@ const weightInput = document.querySelector("#weight-select");
 const addButton = document.querySelector("#add-button");
 const exerciseList = document.querySelector("#exercise-list");
 
-// EVENT LISTENERS
+// ADDBUTTON EVENT LISTENER
 addButton.addEventListener("click", addExercise);
 
-// FUNCTIONS
 const completeButton = document.createElement("button");
 completeButton.innerHTML = `<button class="complete-btn"><i class="fas fa-check"></i></button>`;
 completeButton.classList.add("complete-btn");
@@ -19,14 +18,13 @@ deleteButton.innerHTML = `<button class="delete-btn"><i class="far fa-trash-alt"
 deleteButton.classList.add("delete-btn");
 deleteButton.addEventListener("click", deleteExercise);
 
-//add exercise to list
+// ADD EXERCISE TO LIST
 function addExercise(event){ 
 event.preventDefault(); //stops page from reloading when addButton clicked
 
 const exerciseItem = document.createElement("div");
 exerciseItem.classList.add("exercise");
 
-//list item
 const newExercise = document.createElement("li");
 newExercise.innerHTML = 
     `EXERCISE : <input type="text" value="${exerciseSelect.value}" readonly="true"></input>
@@ -41,10 +39,12 @@ exerciseList.appendChild(newExercise);
 
 }
 
+// ADD STYLING FOR COMPLETED EXERCISES
 function completeExercise(e) {
     console.log("hello world");
 }
 
+// DELETE LIST ITEM WHEN TRASH BUTTON CLICKED
 function deleteExercise(e) {
     console.log("delete world")
 }
